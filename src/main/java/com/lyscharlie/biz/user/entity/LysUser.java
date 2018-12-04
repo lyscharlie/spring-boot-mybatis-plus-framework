@@ -1,6 +1,5 @@
 package com.lyscharlie.biz.user.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -14,9 +13,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
  * @author liyishi
  * @since 2018-12-04
  */
-public class LysUser implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class LysUser {
 
 	/**
 	 * 用户id
