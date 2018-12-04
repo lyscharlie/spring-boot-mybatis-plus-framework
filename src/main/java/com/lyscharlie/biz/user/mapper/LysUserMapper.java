@@ -1,10 +1,9 @@
 package com.lyscharlie.biz.user.mapper;
 
-import com.lyscharlie.biz.user.entity.LysUser;
-
 import org.apache.ibatis.annotations.Mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.lyscharlie.biz.user.entity.LysUser;
 
 /**
  * <p>
