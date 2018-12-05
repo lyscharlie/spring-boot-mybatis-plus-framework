@@ -84,7 +84,7 @@ public class CodeGenerator {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
 				// 自定义输入文件名称
-				return projectPath + "/src/main/resources/mapper/" + StringUtils.uncapitalize(tableInfo.getEntityName()) + "Mapper" + StringPool.DOT_XML;
+				return projectPath + "/src/main/resources/mapper/" + StringUtils.uncapitalize(tableInfo.getMapperName()) + StringPool.DOT_XML;
 			}
 		});
 		cfg.setFileOutConfigList(focList);
