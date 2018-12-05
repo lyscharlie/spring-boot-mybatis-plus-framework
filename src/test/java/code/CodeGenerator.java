@@ -1,4 +1,4 @@
-package com.lyscharlie;
+package code;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,7 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
@@ -51,6 +52,8 @@ public class CodeGenerator {
 		String projectPath = System.getProperty("user.dir");
 		gc.setOutputDir(projectPath + "/src/main/java");
 		gc.setAuthor("liyishi");
+		gc.setDateType(DateType.ONLY_DATE);
+		// gc.setEntityName("%sDO");
 		gc.setOpen(false);
 		mpg.setGlobalConfig(gc);
 
@@ -98,9 +101,9 @@ public class CodeGenerator {
 		// strategy.setSuperControllerClass("com.baomidou.ant.common.BaseController");
 		strategy.setInclude(scanner("表名"));
 		strategy.setSuperEntityColumns("id");
-		// strategy.setControllerMappingHyphenStyle(true);
+		strategy.setControllerMappingHyphenStyle(true);
 		strategy.setTablePrefix(pc.getModuleName() + "_");
-		strategy.setSuperServiceImplClass(null);
+		strategy.setLogicDeleteFieldName("is_delete");
 		mpg.setStrategy(strategy);
 		mpg.setTemplateEngine(new FreemarkerTemplateEngine());
 		mpg.execute();
