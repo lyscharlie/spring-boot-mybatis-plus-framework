@@ -1,7 +1,7 @@
 package com.lyscharlie.biz.user.service;
 
-import com.lyscharlie.biz.user.entity.LysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lyscharlie.biz.user.entity.LysUser;
 
 /**
  * <p>
